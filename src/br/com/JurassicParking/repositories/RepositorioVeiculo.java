@@ -1,32 +1,39 @@
 package br.com.JurassicParking.repositories;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import br.com.JurassicParking.beans.Veiculo;
 
 public class RepositorioVeiculo implements IRepositorioVeiculo{
 
 	private static RepositorioVeiculo instancia;
-	private ArrayList<Veiculo> listaVeiculo;
+	private List<Veiculo> listaVeiculo;
+	private Map<String,Veiculo> m = new HashMap<String,Veiculo>();
 	
 	private RepositorioVeiculo() {
 		this.listaVeiculo = new ArrayList<Veiculo>();
 	}
 	
-	public static synchronized RepositorioVeiculo getInstancia() {
+	public static synchronized RepositorioVeiculo getInstance() {
 		if(instancia == null) {
 			instancia = new RepositorioVeiculo();
 		}
 		return instancia;
 	}
 	
-	public ArrayList<Veiculo> listar() {
-		return listaVeiculo;
+	public List<Veiculo> listar() {
+		return Collections.unmodifiableList(listaVeiculo);
 		
 	}
 	
 	@Override
 	public void add(Veiculo veiculo) {
+		this.m.put(veiculo.getPlaca(), veiculo);
 		this.listaVeiculo.add(veiculo);
 	}
 
@@ -43,12 +50,14 @@ public class RepositorioVeiculo implements IRepositorioVeiculo{
 
 	@Override
 	public Veiculo buscar(String placa) {
-		for(Veiculo veiculo: listaVeiculo) {
-			if(veiculo.getPlaca().equals(placa)) {
-				return veiculo;
-			}
-		}
-		return null;
+		return this.m.get(placa);
 	}
-
+	
+	public void ordenarPorPlaca() {
+		this.listaVeiculo.sort(Comparator.comparing(t1 -> t1.getPlaca()));
+	}
+	
+	public void ordenarPorTipoVeiculo() {
+		this.listaVeiculo.sort(Comparator.comparing(t1 -> t1.getTipoVeiculo()));
+	}
 }

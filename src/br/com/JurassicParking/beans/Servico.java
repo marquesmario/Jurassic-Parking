@@ -54,4 +54,8 @@ public class Servico {
 	public String toString() {
 		return "Servico [nome=" + nome + ", preco=" + preco + ", tipoServico=" + tipoServico + "]";
 	}
+
+	public int compareTo(String p2) {
+		return this.nome.compareTo(p2);
+	}
 }
