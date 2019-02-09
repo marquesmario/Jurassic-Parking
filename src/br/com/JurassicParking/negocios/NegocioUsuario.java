@@ -38,7 +38,7 @@ public class NegocioUsuario implements INegocioUsuario {
 
 	@Override
 	public void editar(String Cpf, Usuario s1) throws UsuarioNaoExisteException, UsuarioInvalidoException {
-		if(s1 != null && this.Usuario.buscar(Cpf) != null) {
+		if(s1 != null && s1.getCpf() != null && s1.getEmail() != null && s1.getIdade() != 0 && s1.getNome() != null && s1.getRG() != 0 && (s1.getSexo() == 'M' || s1.getSexo() == 'F' || s1.getSexo() == 'O') && this.Usuario.buscar(Cpf) != null) {
 			this.Usuario.update(Cpf, s1);
 		}else if(s1 == null) {
 			throw new UsuarioInvalidoException();

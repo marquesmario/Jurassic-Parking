@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="347.0" prefWidth="376.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.jurassic_parking.gui.PagamentoAVistaController">
+   <children>
+      <ImageView fitHeight="347.0" fitWidth="376.0" layoutX="-2.0" layoutY="50.0" opacity="0.07" pickOnBounds="true" preserveRatio="true" scaleY="1.4">
+         <image>
+            <Image url="@imagens/dinoback.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="21.0" text="Pagamento a Vista">
+         <font>
+            <Font name="African" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="102.0" text="CPF">
+         <font>
+            <Font name="African" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="168.0" text="Valor Debitado" textOverrun="CLIP">
+         <font>
+            <Font name="African" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoConfirmar" layoutX="188.0" layoutY="291.0" mnemonicParsing="false" onAction="#confirmar" text="Confirmar" />
+      <Button fx:id="botaoCancelar" layoutX="283.0" layoutY="291.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+      <TextField fx:id="cpf" layoutX="188.0" layoutY="97.0" />
+      <TextField fx:id="valorDebitado" layoutX="188.0" layoutY="163.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="412.0" prefWidth="366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.jurassic_parking.gui.PaginaContaController">
+   <children>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="371.0" style="-fx-background-color: transparent;">
+         <children>
+            <BorderPane layoutX="-4.0" prefHeight="412.0" prefWidth="380.0">
+               <center>
+                  <SplitPane prefHeight="410.0" prefWidth="625.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="410.0" prefWidth="636.0">
+                           <children>
+                              <ImageView fitHeight="423.0" fitWidth="380.0" layoutX="6.0" layoutY="80.0" opacity="0.05" pickOnBounds="true" preserveRatio="true" scaleY="1.65">
+                                 <image>
+                                    <Image url="@imagens/dinoback.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="75.0" fitWidth="219.0" layoutX="75.0" layoutY="5.0" opacity="0.4" pickOnBounds="true" preserveRatio="true" scaleX="1.3" scaleY="0.9">
+                                 <image>
+                                    <Image url="@imagens/dino.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="botaoEditar" layoutX="157.0" layoutY="224.0" mnemonicParsing="false" onAction="#editarCliente" prefHeight="25.0" prefWidth="78.0" text="Editar" />
+                              <Button fx:id="botaoCadastrarM" layoutX="155.0" layoutY="135.0" mnemonicParsing="false" onAction="#cadastrarM" text="Cadastrar M" />
+                              <Label alignment="CENTER" layoutX="119.0" layoutY="179.0" text="Cadastro de Cliente" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="African" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="88.0" layoutY="269.0" text="Editar alguma informacao,&#10; Deletar Cliente e &#10;Descoupar Vaga" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="African" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="15.0" prefHeight="55.0" prefWidth="277.0" style="-fx-border-color: ;" text="jurassic Parking &#10;Cadastro Cliente" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="African" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="35.0" layoutY="369.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="81.0" text="Voltar" />
+                              <Label layoutX="133.0" layoutY="375.0" text="Voltar a pagina Inicial" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="African" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

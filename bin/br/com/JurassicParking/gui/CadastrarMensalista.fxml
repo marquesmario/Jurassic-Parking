@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="585.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.jurassic_parking.gui.CadastrarMensalistaController">
+   <children>
+      <ImageView fitHeight="393.0" fitWidth="585.0" layoutX="1.0" layoutY="5.0" opacity="0.06" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagens/dinoback.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="escreverNome" layoutX="101.0" layoutY="91.0" />
+      <Label layoutX="46.0" layoutY="93.0" prefHeight="17.0" prefWidth="42.0" text="Nome">
+         <font>
+            <Font name="African" size="12.0" />
+         </font></Label>
+      <Label layoutX="342.0" layoutY="93.0" text="CPF">
+         <font>
+            <Font name="African" size="12.0" />
+         </font></Label>
+      <TextField fx:id="escreverCPF" layoutX="386.0" layoutY="91.0" />
+      <TextField fx:id="escreverGenero" layoutX="101.0" layoutY="120.0" />
+      <TextField fx:id="escreverEndereco" layoutX="101.0" layoutY="149.0" />
+      <Label layoutX="43.0" layoutY="122.0" text="Genero">
+         <font>
+            <Font name="African" size="12.0" />
+         </font></Label>
+      <Label layoutX="22.0" layoutY="155.0" text="Endereco">
+         <font>
+            <Font name="African" size="12.0" />
+         </font></Label>
+      <Label layoutX="256.0" layoutY="153.0" prefHeight="17.0" prefWidth="120.0" text="Tipo de Cliente">
+         <font>
+            <Font name="African" size="12.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="240.0" text="Modelo">
+         <font>
+            <Font name="African" size="12.0" />
+         </font></Label>
+      <TextField fx:id="escreverModelo" layoutX="94.0" layoutY="234.0" />
+      <Label layoutX="252.0" layoutY="128.0" text="Data de Nascimento">
+         <font>
+            <Font name="African" size="10.0" />
+         </font></Label>
+      <Label contentDisplay="CENTER" layoutX="184.0" layoutY="24.0" prefHeight="36.0" prefWidth="256.0" text="Dados Cliente" textAlignment="CENTER">
+         <font>
+            <Font name="African" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="182.0" prefHeight="36.0" prefWidth="289.0" text="Dados do veiculo" textAlignment="CENTER">
+         <font>
+            <Font name="African" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="240.0" text="Placa do Carro">
+         <font>
+            <Font name="African" size="12.0" />
+         </font></Label>
+      <TextField fx:id="escreverPlacaCarro" layoutX="387.0" layoutY="234.0" />
+      <Label layoutX="256.0" layoutY="274.0" prefHeight="13.0" prefWidth="123.0" text="Numero da Vaga">
+         <font>
+            <Font name="African" size="11.0" />
+         </font></Label>
+      <TextField fx:id="escreverVaga" layoutX="387.0" layoutY="268.0" />
+      <HBox layoutX="444.0" layoutY="349.0">
+         <children>
+            <Button fx:id="botaoSalvar" mnemonicParsing="false" onAction="#salvarCliente" text="Salvar">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#cancelarAcao" text="Cancelar" />
+         </children>
+      </HBox>
+      <DatePicker layoutX="386.0" layoutY="120.0" prefHeight="25.0" prefWidth="149.0" />
+      <RadioButton fx:id="mensal" layoutX="386.0" layoutY="153.0" mnemonicParsing="false" selected="true" text="Mensal">
+         <toggleGroup>
+            <ToggleGroup fx:id="tipoDeCliente" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="diario" layoutX="461.0" layoutY="153.0" mnemonicParsing="false" selected="true" text="Diario" toggleGroup="$tipoDeCliente" />
+   </children>
+</AnchorPane>
